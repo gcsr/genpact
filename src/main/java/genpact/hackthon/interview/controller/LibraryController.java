@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import genpact.hackthon.interview.entity.Book;
 import genpact.hackthon.interview.entity.Library;
 import genpact.hackthon.interview.service.LibraryService;
 
 @RestController
-@RequestMapping("/library")
+@RequestMapping("/api/library")
 public class LibraryController {
 
 	@Autowired

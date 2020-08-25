@@ -1,0 +1,26 @@
+<!-- This is for an art item inside a row not for user
+https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(133).jpg-->
+
+
+<!--Card-->
+<div class="card">
+
+    <!--Card image-->
+    <div class="view" (click)="onBookSelect()">
+      <img src="https://m.media-amazon.com/images/I/41jISxBP6dL.jpg" class="card-img-top" alt="" height="200" ngcli>
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <!--Card content-->
+    <div class="card-body">
+      <!--Title-->
+      <h4 class="card-title">{{book.name}}</h4>
+      <!--Text-->
+      <p class="card-text">Available : {{book.quantity}}.</p>
+      
+    </div>
+  
+  </div>
+  <!--/.Card-->

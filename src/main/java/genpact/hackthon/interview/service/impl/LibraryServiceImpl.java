@@ -40,7 +40,7 @@ public class LibraryServiceImpl implements LibraryService {
 			return new ResponseEntity<>(libDB, HttpStatus.CREATED);
 		} else {
 			library = repository.save(library);
-			logger.debug("Saving Library ", library.getId());
+			logger.debug("Saving Library {}", library.getId());
 			return new ResponseEntity<>(library, HttpStatus.CREATED);
 
 		}

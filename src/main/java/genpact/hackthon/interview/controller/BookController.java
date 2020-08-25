@@ -17,7 +17,7 @@ import genpact.hackthon.interview.entity.Book;
 import genpact.hackthon.interview.service.BookService;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/api/book")
 public class BookController {
 
 	@Autowired
