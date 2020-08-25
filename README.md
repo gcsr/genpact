@@ -3,7 +3,7 @@
 # [My Freelance Profile Link](https://www.freelancer.com/u/gcsekhar002)  
 ## Back Code completely available on github  
 ## Front end parent, chld components , services and model class are put in angular folder
-## Out put screenshots of angular application(I've used my own ui plugins, execution can be presented on my laptop)
+## Out put screenshots of angular application(I've used existing ui plugins, execution can be presented on my laptop)
 ## menu, tabs, footer, links in footer, content is added in application, its connected to backend and  running fine
 # Pagination added, Can be seen at the bottom of content
 ## A few screensots 
