@@ -20,7 +20,7 @@ import genpact.hackthon.interview.entity.Book;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class BookControllerTest {
+class BookControllerTest {
 
 
 	private static final Logger logger = LoggerFactory.getLogger(BookControllerTest.class);
@@ -29,7 +29,7 @@ public class BookControllerTest {
 	private MockMvc mockMvc;
 
 	@Test
-	public void add()  {
+	void add()  {
 		Book book = new Book();
 		book.setName("Book 1");
 		book.setQuantity(10);
@@ -37,54 +37,47 @@ public class BookControllerTest {
 			this.mockMvc
 					.perform(MockMvcRequestBuilders.post("/book").content(asJsonString(book))
 							.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON))
-					.andExpect(status().isCreated()).andExpect(MockMvcResultMatchers.jsonPath("$.id").exists());
+					.andExpect(status().isCreated()).andDo(print()).andExpect(MockMvcResultMatchers.jsonPath("$.id").exists());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			logger.error("Test Case Failed at add");
 			e.printStackTrace();
 		}
 	}
 
 	@Test
-	public void getAll() {
+	void getAll() {
 
 		try {
 			add();
 			this.mockMvc.perform(MockMvcRequestBuilders.get("/book").accept(MediaType.APPLICATION_JSON)).andDo(print())
-					.andExpect(status().isOk()).andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-					.andExpect(MockMvcResultMatchers.jsonPath("$.books[*].id").isNotEmpty());
+					.andExpect(status().isOk()).andDo(print()).andExpect(MockMvcResultMatchers.jsonPath("$*.id").exists());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			logger.error("Test Case Failed at getAll");
 			e.printStackTrace();
 		}
 	}
 	
 	@Test
-	public void getById() {
+	void getById() {
 
 		try {
 			add();
 			this.mockMvc.perform(MockMvcRequestBuilders.get("/book/1").accept(MediaType.APPLICATION_JSON)).andDo(print())
 					.andExpect(status().isOk()).andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-					.andExpect(MockMvcResultMatchers.jsonPath("$.books[*].id").isNotEmpty());
+					.andExpect(MockMvcResultMatchers.jsonPath("$.id").isNotEmpty());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			logger.error("Test Case Failed at getAll");
 			e.printStackTrace();
 		}
 	}
 	
 	@Test
-	public void deleteId() {
-
+	void deleteId() {
 		try {
 			add();
 			this.mockMvc.perform(MockMvcRequestBuilders.delete("/book/1").accept(MediaType.APPLICATION_JSON)).andDo(print())
-					.andExpect(status().isOk()).andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-					.andExpect(MockMvcResultMatchers.jsonPath("$.books[*].id").isNotEmpty());
+					.andExpect(status().isOk());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			logger.error("Test Case Failed at getAll");
 			e.printStackTrace();
 		}
