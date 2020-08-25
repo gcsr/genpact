@@ -9,11 +9,11 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>hcl.hackthon</groupId>
+	<groupId>genpact.hackthon</groupId>
 	<artifactId>interview</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>interview</name>
-	<description>HCL Interview Hackthon Book Store Demo</description>
+	<description>Genpact Interview Book Store Demo</description>
 
 	<properties>
 		<java.version>11</java.version>

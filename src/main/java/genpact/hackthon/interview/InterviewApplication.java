@@ -1,4 +1,4 @@
-package hcl.hackthon.interview;
+package genpact.hackthon.interview;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

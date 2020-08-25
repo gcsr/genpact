@@ -1,4 +1,4 @@
-package hcl.hackthon.interview.entity;
+package genpact.hackthon.interview.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

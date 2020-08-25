@@ -1,4 +1,4 @@
-package hcl.hackthon.interview;
+package genpact.hackthon.interview;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
