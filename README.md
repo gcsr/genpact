@@ -1,6 +1,6 @@
 
-# [Freelance Profile Link](https://github.com/gcsr)  
-# [A few codes github Link](https://www.freelancer.com/u/gcsekhar002)  
+# [A few codes github Link](https://github.com/gcsr)  
+# [Freelance Profile Link](https://www.freelancer.com/u/gcsekhar002)  
 ## Back Code completely available on github  
 ## Front end parent, chld components , services and model class are put in angular folder
 ## Out put screenshots of angular application(I've used my own ui plugins, execution can be presented on my laptop)
